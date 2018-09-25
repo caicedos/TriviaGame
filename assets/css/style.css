@@ -1,0 +1,40 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.background {
+    background-image: url("./../images/space_image.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+#title {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#trivia-questions {
+    padding-bottom: 30px;
+}
+
+.questions {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#correct-answers {
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+#time-remaining {
+    font-size: 16pt;
+}
+
+form {
+    color: greenyellow;
+}

@@ -15,18 +15,28 @@ $("#submit-button").on("click", function () {
     console.log(responsesArray);
 
     for (i = 0; i < answersArray.length; i++) {
+        intinitalAnswers();
+
         if (answersArray[i] === responsesArray[i]) {
 
-            $("#correct-answers").html(correctAnswers += 1);
+            correctAnswers += 1;
 
-        } else if (answersArray[i] !== responsesArray[i]) {
-            $("#wrong-answers").html(wrongAnswers += 1);
+            $("#correct-answers").html("Correct:" + correctAnswers);
+
+        }
+        if (answersArray[i] !== responsesArray[i]) {
+            wrongAnswers += 1
+
+            $("#wrong-answers").html("Wrong:" + wrongAnswers);
         }
     }
+
+    hide();
+
 });
 
-var timeRemaining = 15;
-$("#time-remaining").text(timeRemaining);
+var timeRemaining = 30;
+$("#time-remaining").text("Time Remaining:" + timeRemaining);
 var countDown;
 
 function run() {
@@ -39,13 +49,13 @@ function timer() {
 
     timeRemaining--;
 
-    $("#time-remaining").text(timeRemaining);
+    $("#time-remaining").text("Time Remaining:" + timeRemaining);
 
     $("#submit-button").on("click", stop)
 
 
 
-
+    
     if (timeRemaining === 0) {
 
         alert("TIME'S UP!!!");
@@ -61,24 +71,41 @@ function timer() {
         console.log(responsesArray);
 
         for (i = 0; i < answersArray.length; i++) {
+
+            intinitalAnswers();
+
             if (answersArray[i] === responsesArray[i]) {
 
-                $("#correct-answers").html(correctAnswers += 1);
+                correctAnswers += 1;
 
-            } else if (answersArray[i] !== responsesArray[i]) {
-                $("#wrong-answers").html(wrongAnswers += 1);
+                $("#correct-answers").html("Correct:" + correctAnswers);
+
+            }
+            if (answersArray[i] !== responsesArray[i]) {
+                wrongAnswers += 1
+
+                $("#wrong-answers").html("Wrong:" + wrongAnswers);
             }
         }
 
-        $("#submit-button").hide();
-
+        hide();
         stop();
     }
 }
 
 function stop() {
     clearInterval(countDown);
+}
 
+function intinitalAnswers() {
+    $("#correct-answers").html("Correct:" + correctAnswers);
+    $("#wrong-answers").html("Wrong:" + wrongAnswers);
+}
+
+function hide() {
+    $("#time-remaining").hide();
+    $("#submit-button").hide();
+    $("#trivia-questions").hide();
 }
 
 run();
