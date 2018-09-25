@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>Trivia Game</title>
+</head>
+
+<body>
+
+    <h1>Trivia Game</h1>
+
+    <div>Time Remaining: <span id="time-remaining"></span></div>
+
+
+        <h3>How many planets in the Solar System?</h3>
+
+        <form>
+            <input type="radio" class="mc-answers" name="answer0"value="A">10
+            <input type="radio" class="mc-answers" name="answer0" value="B">8
+            <input type="radio" class="mc-answers" name="answer0" value="C">12
+            <input type="radio" class="mc-answers" name="answer0" value="D">3
+        </form>
+
+        <h3>How many stars in the Solar System?</h3>
+
+        <form>
+            <input type="radio" id="question1" class="mc-answers" name="answer1" value="A">3
+            <input type="radio"  id="question1" class="mc-answers" name="answer1" value="B">7
+            <input type="radio"  id="question1" class="mc-answers" name="answer1" value="C">4
+            <input type="radio"  id="question1" class="mc-answers" name="answer1" value="D">1
+        </form>
+
+        <h3>How many moons does Earth have in orbit?</h3>
+
+        <form>
+            <input type="radio" name="answer2" class="mc-answers" value="A">1
+            <input type="radio" name="answer2" class="mc-answers" value="B">4
+            <input type="radio" name="answer2" class="mc-answers" value="C">7
+            <input type="radio" name="answer2" class="mc-answers" value="D">7
+        </form>
+
+    <br>
+
+    <button id="submit-button">Done!</button>
+
+    <br><br>
+
+    <div> Correct: <span id="correct-answers">0</span></div>
+
+    <div> Wrong: <span id="wrong-answers">0</span></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+</body>
+
+</html>
